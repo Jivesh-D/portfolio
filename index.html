@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anshika Dahiya | Data Analyst</title>
+<meta name="description" content="Portfolio of Anshika Dahiya, Data Analyst and SAP Analyst: Tableau and SQL projects, skills and certifications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Montserrat:wght@400;500;700&family=DM+Sans:wght@400;700&display=swap">
+<style>
+  /* Layout: one centred rounded card on a soft grey ground, sections stacked with short gold rules (mirrors the reference Carrd one-pager). */
+  :root {
+    --ground: #ECECEC;
+    --card: #F6F6F6;
+    --card-border: rgba(0,0,0,0.05);
+    --shadow: rgba(94,94,94,0.35);
+    --ink: #1C2120;
+    --ink-soft: rgba(28,33,32,0.6);
+    --accent: #F6C77D;
+    --accent-deep: #C2954E;
+    --accent-ink: #000000;
+    --rule: #E6A640;
+    --img-frame: #ffffff;
+    --font-body: 'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    --font-label: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    --font-display: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #15171A; --card: #1F2226; --card-border: rgba(255,255,255,0.06); --shadow: rgba(0,0,0,0.6);
+      --ink: #ECEAE4; --ink-soft: rgba(236,234,228,0.65); --accent: #E6B46B; --accent-deep: #F6C77D; --accent-ink: #161616;
+      --rule: #C79240; --img-frame: #2A2E33; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #15171A; --card: #1F2226; --card-border: rgba(255,255,255,0.06); --shadow: rgba(0,0,0,0.6);
+    --ink: #ECEAE4; --ink-soft: rgba(236,234,228,0.65); --accent: #E6B46B; --accent-deep: #F6C77D; --accent-ink: #161616;
+    --rule: #C79240; --img-frame: #2A2E33; color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font-family: var(--font-body); font-weight: 300; font-size: 1rem; line-height: 1.75;
+    padding-block: 3.5rem;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    display: flex; justify-content: center;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; height: auto; display: block; }
+  section, article, .project > div { min-width: 0; }
+
+  main {
+    width: 38rem; max-width: 100%; min-width: 0;
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 3rem; box-shadow: 0.19rem 0.46rem 3.1rem 0.6rem var(--shadow);
+    padding: 3.75rem 3rem; text-align: center;
+  }
+  @media (max-width: 520px) { main { padding: 2.5rem 1.25rem; border-radius: 2rem; } body { padding-block: 1.5rem; } }
+
+  section { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .rule { width: 60%; max-width: 20rem; height: 1px; background: var(--rule); border: 0; margin: 1.75rem auto; }
+  .rule.short { width: 7rem; margin: 0.25rem auto; }
+
+  /* Hero */
+  .avatar {
+    width: 11rem; height: 11rem; border-radius: 50%; background: var(--accent);
+    overflow: hidden; display: grid; place-items: end center;
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; border-radius: 50%; }
+  h1 {
+    font-family: var(--font-display); font-weight: 400; text-transform: uppercase;
+    letter-spacing: 0.6rem; font-size: clamp(1.25rem, 4vw, 1.625rem); line-height: 1.25; margin: 0;
+    padding-left: 0.6rem; text-wrap: balance;
+  }
+  .tagline { font-weight: 400; font-size: 1.05rem; margin: 0; }
+
+  .icons { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 1.25rem; padding: 0; margin: 0.5rem 0 0; }
+  .icons a {
+    width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--accent); color: var(--accent-ink);
+    display: grid; place-items: center; transition: background .2s, transform .2s;
+  }
+  .icons a:hover, .icons a:focus-visible { background: var(--accent-deep); transform: translateY(-2px); outline: none; }
+  .icons svg { width: 1.3rem; height: 1.3rem; fill: currentColor; }
+
+  .button {
+    display: inline-block; font-family: var(--font-label); text-transform: uppercase; letter-spacing: 0.275rem;
+    font-size: 0.7rem; font-weight: 500; padding: 0.55rem 1.6rem 0.55rem 1.85rem; border-radius: 2rem;
+    background: var(--accent); color: var(--accent-ink); text-decoration: none; transition: background .2s;
+  }
+  .button:hover, .button:focus-visible { background: var(--accent-deep); outline: none; }
+  .button.small { font-size: 0.62rem; padding: 0.5rem 1.4rem 0.5rem 1.65rem; }
+
+  .arrow { width: 2.6rem; height: 2.6rem; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; }
+  .arrow svg { width: 1.2rem; height: 1.2rem; fill: currentColor; }
+
+  h2 { font-family: var(--font-body); font-weight: 400; font-size: 1.35rem; margin: 0; letter-spacing: 0.02rem; text-wrap: balance; }
+  .about { max-width: 34rem; margin: 0; font-size: 0.95rem; text-align: left; }
+  @media (min-width: 521px) { .about { text-align: center; } }
+
+  /* Skills */
+  .skills-logo { width: min(22rem, 100%); }
+  .skills-line { font-weight: 400; font-size: 1.05rem; margin: 0; }
+  .skills-grid {
+    list-style: none; padding: 0; margin: 0; width: 100%; text-align: left;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.1rem 1.25rem;
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.025rem;
+  }
+  .skills-grid li { display: flex; gap: 0.5rem; align-items: baseline; min-width: 0; }
+  .skills-grid li::before { content: ""; flex: 0 0 auto; width: 0.35rem; height: 0.35rem; border-radius: 50%; background: var(--rule); transform: translateY(-0.1rem); }
+
+  /* Projects */
+  .project { width: 100%; text-align: left; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; align-items: start; }
+  .project .head { grid-column: 1 / -1; }
+  .project .label { font-family: var(--font-label); text-transform: uppercase; letter-spacing: 0.275rem; font-size: 0.72rem; font-weight: 500; margin: 0; }
+  .project .title { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.2rem; font-size: 0.82rem; margin: 0.15rem 0 0; font-weight: 400; }
+  .project p.desc { margin: 0 0 1rem; font-size: 0.9rem; line-height: 1.7; min-width: 0; }
+  .project .shots { display: grid; gap: 0.75rem; }
+  .project .shots img { border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--img-frame); width: 100%; }
+  @media (max-width: 520px) { .project { grid-template-columns: 1fr; } }
+
+  /* Certifications */
+  .certs { list-style: none; padding: 0; margin: 0; width: 100%; display: grid; gap: 1rem; text-align: left; }
+  .certs li { display: grid; grid-template-columns: 4rem 1fr; gap: 1rem; align-items: center; }
+  .badge { width: 4rem; height: 4rem; border-radius: 0.5rem; display: grid; place-items: center; font-family: var(--font-label); font-weight: 700; font-size: 1.15rem; letter-spacing: 0.05rem; color: #fff; }
+  .badge.react { background: #20232A; color: #61DAFB; }
+  .badge.linux { background: #1C1C1C; color: #F5C518; }
+  .badge.ai { background: #0F4C81; }
+  .certs p { margin: 0; font-size: 0.9rem; }
+  .certs b { font-weight: 700; }
+  .certs .issuer { color: var(--ink-soft); font-size: 0.8rem; }
+
+  /* Thanks */
+  .thanks { font-size: 0.95rem; margin: 0; }
+  .thanks b { font-weight: 700; display: block; margin-bottom: 0.25rem; }
+  .email-line { margin: 0.5rem 0 0; font-size: 0.9rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; align-items: center; }
+  .email-line code { font-family: var(--font-body); font-weight: 600; background: var(--ground); padding: 0.1rem 0.5rem; border-radius: 0.4rem; user-select: all; }
+  .copy { font: inherit; font-size: 0.72rem; font-family: var(--font-label); letter-spacing: 0.1rem; text-transform: uppercase; border: 0; border-radius: 1rem; padding: 0.3rem 0.8rem; background: var(--accent); color: var(--accent-ink); cursor: pointer; }
+  .copy:hover, .copy:focus-visible { background: var(--accent-deep); outline: none; }
+  footer { margin-top: 2rem; font-size: 0.7rem; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<main>
+
+  <section id="top" aria-label="Introduction">
+    <div class="avatar"><img src="assets/anshika.jpg" alt="Portrait of Anshika Dahiya" width="270" height="270"></div>
+    <h1>Anshika Dahiya</h1>
+    <hr class="rule short">
+    <p class="tagline">Data Analyst | SAP Analyst</p>
+    <ul class="icons">
+      <li><a href="https://www.linkedin.com/in/anshika-dahiya-4578a0252/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.8 2.6 4.8 6.1V24h-4v-7.9c0-1.9 0-4.3-2.6-4.3s-3 2-3 4.1V24H8V8z"/></svg></a></li>
+      <li><a href="mailto:anshikadahiya11@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2.5V18h18V6.5l-9 6-9-6zM4.3 6l7.7 5.1L19.7 6H4.3z"/></svg></a></li>
+      <li><a href="https://public.tableau.com/app/profile/jivesh.dahiya/vizzes" aria-label="Tableau Public" title="Tableau Public" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M11 2h2v4h4v2h-4v4h-2V8H7V6h4V2zM4 9h2v3h3v2H6v3H4v-3H1v-2h3V9zm14 0h2v3h3v2h-3v3h-2v-3h-3v-2h3V9zm-7 6h2v3h3v2h-3v3h-2v-3H8v-2h3v-3z"/></svg></a></li>
+      <li><a href="tel:+919653536500" aria-label="Phone" title="+91 9653536500"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg></a></li>
+    </ul>
+    <a class="button" href="Anshika_Dahiya_Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+    <hr class="rule short">
+    <a class="arrow" href="#aboutme" aria-label="Scroll to About Me"><svg viewBox="0 0 24 24"><path d="M12 16.5 4.5 9l1.4-1.4L12 13.7l6.1-6.1L19.5 9z"/></svg></a>
+  </section>
+
+  <section id="aboutme" aria-labelledby="about-h">
+    <h2 id="about-h">About Me</h2>
+    <p class="about">Hi! I'm Anshika, a Data Analyst currently working as an SAP Analyst at Capgemini in Bengaluru. I turn SAP and business data into clear reports and dashboards, and I use AI tools such as ChatGPT, Claude and GitHub Copilot to automate the repetitive parts of the job: data validation, report refreshes and ticket summaries. I'm passionate about uncovering patterns in diverse data sets and delivering analyses and visualizations that support better decisions.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section id="skills" aria-labelledby="skills-h">
+    <h2 id="skills-h">Skills</h2>
+    <img class="skills-logo" src="assets/skills.png" alt="Tableau, Power BI, Pandas, SQL, Excel and Python logos" width="780" height="190">
+    <p class="skills-line">Tableau | Power BI | Pandas | SQL | Excel | Python | SAP | AI Tools</p>
+    <ul class="skills-grid">
+      <li>SQL (MySQL, SQL Server, PostgreSQL)</li>
+      <li>AI &amp; Automation (ChatGPT, Claude, GitHub Copilot, prompt-driven scripting)</li>
+      <li>Python (Pandas, NumPy, Matplotlib, SciPy, Scikit-learn*)</li>
+      <li>SAP (S/4HANA, SE16N / SQVI, data loads, ticket management)</li>
+      <li>Tableau | Microsoft Power BI | Google Data Studio</li>
+      <li>Statistical Tests (A/B testing, T-test, Z-test, ANOVA)</li>
+      <li>Excel (Advanced, Power Query, VBA) | Google Analytics*</li>
+      <li>ML Algorithms (Linear, Logistic regression)</li>
+    </ul>
+  </section>
+
+  <hr class="rule">
+
+  <section id="projects" aria-labelledby="projects-h">
+    <h2 id="projects-h">Featured Projects</h2>
+
+    <article class="project">
+      <div class="head">
+        <p class="label">Tableau Dashboard</p>
+        <h3 class="title">Olympic Games Analysis</h3>
+      </div>
+      <div>
+        <p class="desc">Dynamic analysis of the Summer Olympic Games (1960 - 2016) covering athlete stats by country and year, country performance, sex ratio, participation rates and a medals leaderboard. Data cleaned and aggregated in Pandas, visualised in Tableau.</p>
+        <a class="button small" href="https://public.tableau.com/views/Summer_Olympic1960-2016_Statistical_viz/dash1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">More</a>
+      </div>
+      <div class="shots">
+        <img src="assets/olympics-1.jpg" alt="Olympics dashboard page 1: medal distribution of top 30 countries" width="450" height="253">
+        <img src="assets/olympics-2.jpg" alt="Olympics dashboard page 2: participation trends" width="450" height="253">
+      </div>
+    </article>
+
+    <hr class="rule">
+
+    <article class="project">
+      <div class="head">
+        <p class="label">Tableau Dashboard</p>
+        <h3 class="title">CarDekho Dataset Analysis</h3>
+      </div>
+      <div>
+        <p class="desc">Analyzed 4,500 CarDekho marketplace rows using Pandas; visualized in Tableau. Cleaned and aggregated data, created dynamic dashboards, and compiled a summary report on price, fuel type, ownership and selling trends.</p>
+        <a class="button small" href="https://public.tableau.com/views/CarDekho_data_Analysis_viz/Dashboard5?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">More</a>
+      </div>
+      <div class="shots">
+        <img src="assets/cardekho-1.jpg" alt="CarDekho dashboard page 1" width="450" height="253">
+        <img src="assets/cardekho-2.jpg" alt="CarDekho dashboard page 2" width="450" height="253">
+      </div>
+    </article>
+
+    <hr class="rule">
+
+    <article class="project">
+      <div class="head">
+        <p class="label">SQL Database</p>
+        <h3 class="title">Cost of Living Analysis</h3>
+      </div>
+      <div>
+        <p class="desc">Designed and deployed a MySQL database with triggers for data safety and stored procedures for transformation. Extracted, cleaned and validated data using SQL (joins, unions, views, subqueries, window functions). Created a dynamic dashboard to analyze global income and expenses (2000 - 2023).</p>
+        <a class="button small" href="https://public.tableau.com/views/cost_of_living2000-2023_Analysis/Dashboard6?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">More</a>
+      </div>
+      <div class="shots">
+        <img src="assets/col-1.jpg" alt="Cost of living dashboard page 1" width="450" height="253">
+        <img src="assets/col-2.jpg" alt="Cost of living dashboard page 2" width="450" height="253">
+      </div>
+    </article>
+  </section>
+
+  <hr class="rule">
+
+  <section id="certifications" aria-labelledby="certs-h">
+    <h2 id="certs-h">Professional Certifications</h2>
+    <ul class="certs">
+      <li><div class="badge react" aria-hidden="true">R</div><p><b>React Certification</b><br><span class="issuer">Solitaire Infosys</span></p></li>
+      <li><div class="badge linux" aria-hidden="true">&gt;_</div><p><b>Linux Certification</b><br><span class="issuer">Command line, shell and system administration basics</span></p></li>
+      <li><div class="badge ai" aria-hidden="true">AI</div><p><b>Python &amp; Artificial Intelligence Workshop</b><br><span class="issuer">Chandigarh Group of Colleges, Landran</span></p></li>
+    </ul>
+  </section>
+
+  <hr class="rule">
+
+  <section id="contact" aria-label="Contact">
+    <p class="thanks"><b>Thanks =)</b>Thank you for taking the time to visit my portfolio!<br>If you'd like to chat about me joining your team, feel free to email me &lt;3</p>
+    <p class="email-line"><code id="email">anshikadahiya11@gmail.com</code><button class="copy" id="copy-email" type="button">Copy</button></p>
+    <footer>Bengaluru, India</footer>
+  </section>
+
+</main>
+<script>
+  (function () {
+    var btn = document.getElementById('copy-email');
+    var code = document.getElementById('email');
+    if (!btn || !code) return;
+    btn.addEventListener('click', function () {
+      var text = code.textContent;
+      function done(ok) { btn.textContent = ok ? 'Copied' : 'Select & copy'; setTimeout(function () { btn.textContent = 'Copy'; }, 1800); }
+      function fallback() {
+        try { var r = document.createRange(); r.selectNodeContents(code); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {}
+        done(false);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, fallback);
+      } else { fallback(); }
+    });
+  })();
+</script>
+</body>
+</html>
